@@ -37,6 +37,25 @@ for i in range(20):
     AddNode()
 
 x = 0
-for i in ArrayNodes:
-    print(x, i)
-    x += 1
+
+def PrintAll():
+    global x
+    print("    LeftPointer ","  Data  " , " RightPointer " )
+    for i in ArrayNodes:
+        a = i[0]
+        b = i[1]
+        c = i[2]
+        print(x,"    " , a, "           ",b , "           " , c)
+        x += 1
+
+print("#Printing all nodes ")
+PrintAll()
+
+def Traversal(root):
+    if root!= null:
+        Traversal(ArrayNodes[root][0])
+        print(ArrayNodes[root][1])
+        Traversal(ArrayNodes[root][2])
+
+print("#InOrder Traversal ")
+Traversal(root)
