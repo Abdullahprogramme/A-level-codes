@@ -35,7 +35,7 @@ for i in range(11):
 
 def Pop():
     global StackPointer, Flag
-    while StackPointer > -2:
+    while StackPointer > -1:
         if StackPointer == 0:
            print("Stack is empty")
         else:
